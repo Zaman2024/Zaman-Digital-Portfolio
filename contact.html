@@ -41,7 +41,7 @@
             margin: 50px 80px auto 80px;
         }
 
-        .contact> :first-of-type {
+        .contact-left> :first-of-type {
             border: none;
             outline: none;
             border-radius: 15px;
@@ -273,12 +273,14 @@
     </div>
     <div class="contact">
         <div class="contact-left">
-            <h1 style="color:#fff">Get in Touch</h1>
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="email" id="email" placeholder="E-mail" required>
-            <input type="text" id="sub" placeholder="Subject">
-            <textarea name="" id="" cols="20" rows="5" placeholder="Message"></textarea>
-            <button type="submit" id="btn">Send</button>
+            <form onsubmit="sendEmail(); reset(); return false">
+                <h1 style="color:#fff">Get in Touch</h1>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="text" id="sub" placeholder="Subject">
+                <textarea name="" id="message" cols="20" rows="5" placeholder="Message"></textarea>
+                <button type="submit" id="btn">Send</button>
+            </form>
         </div>
         <div class="contact-right">
             <img src="img/contact2.png" alt="">
@@ -290,6 +292,26 @@
     <script src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "zamanofficial1980@gmail.com",
+                Password: "Sadik@1993#23",
+                To: 'zamanofficial1980@gmail.com',
+                From: document.getElementById('email').value,
+                Subject: "New contact from enquery",
+                Body: "Name : " + document.getElementById('name').value +
+                    "<br> Email : " + document.getElementById('email').value +
+                    "<br> Message : " + document.getElementById('message').value
+            }).then(
+                message => alert('Message send succesfully')
+            );
+        }
+
+    </script>
 </body>
 
 </html>
