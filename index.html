@@ -26,6 +26,212 @@
   <link rel="stylesheet" href="css/myCss.css" />
   <link rel="stylesheet" href="css/demo.css" />
   <meta name="theme-color" content="#fafafa" />
+  <style>
+    body {
+      overflow-y: hidden;
+      /* Hide vertical scrollbar */
+      overflow-x: hidden;
+      /* Hide horizontal scrollbar */
+    }
+
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px 80px auto 80px;
+    }
+
+    .contact-left> :first-of-type {
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      box-sizing: border-box;
+      box-shadow: 10px 0 20px rgba(253, 252, 252, 0.3),
+        -10px 0 20px rgba(253, 252, 252, 0.3);
+      animation: slid1 1.5s ease-out;
+
+    }
+
+    @keyframes slid1 {
+      0% {
+        visibility: hidden;
+        transform: translateX(-80%);
+      }
+
+      100% {
+        visibility: visible;
+        transform: translateX(0%);
+      }
+
+    }
+
+    h1,
+    input,
+    textarea {
+      border: none;
+      border-radius: 15px;
+      outline: none;
+      padding: 5px;
+      margin: 8px;
+
+    }
+
+    input,
+    textarea {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: #fff;
+      box-sizing: border-box;
+      box-sizing: border-box;
+      box-shadow: 1px 0 6px rgba(253, 252, 252, 0.2),
+        -1px 0 6px rgba(253, 252, 252, 0.2);
+
+    }
+
+    #btn {
+      background-image: linear-gradient(to top right, rgba(255, 0, 0, 0.8), rgba(31, 8, 243, 0.9));
+      border-inline: 4px solid rgba(12, 11, 11, 0.5);
+      border-radius: 15px;
+      outline: 1px solid #1c1622;
+      outline-offset: 2px;
+      margin: 10px 120px auto 120px;
+      padding: 5px;
+      color: #070707
+    }
+
+    .bg1 {
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      z-index: -78798;
+      rotate: -10deg;
+      padding: 80px;
+      margin-top: 335px;
+      overflow: hidden;
+    }
+
+    #sq {
+      border: none;
+      border-radius: 5px;
+      background: rgb(7, 1, 25);
+      width: 200px;
+      height: 250px;
+      rotate: -30deg;
+      box-sizing: border-box;
+      box-shadow: 10px 0 20px rgba(51, 40, 73, 0.2),
+        -10px 0 20px rgba(51, 40, 73, 0.2);
+    }
+
+    #cr {
+      border: none;
+      border-radius: 5px;
+      border-radius: 100%;
+      background: rgb(7, 1, 25);
+      width: 200px;
+      height: 200px;
+      box-sizing: border-box;
+      box-shadow: 10px 0 20px rgba(51, 40, 73, 0.2),
+        -10px 0 20px rgba(51, 40, 73, 0.2);
+
+    }
+
+    .bg2 {
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      z-index: -78798;
+      rotate: -10deg;
+      padding: 80px;
+      margin-top: -35px;
+      overflow: hidden
+    }
+
+    #sq {
+      border: none;
+      border-radius: 5px;
+      background: rgb(7, 1, 25);
+      width: 200px;
+      height: 250px;
+      rotate: -30deg;
+      box-sizing: border-box;
+      box-shadow: 10px 0 20px rgba(51, 40, 73, 0.2),
+        -10px 0 20px rgba(51, 40, 73, 0.2);
+    }
+
+    #cr {
+      border: none;
+      border-radius: 5px;
+      border-radius: 100%;
+      background: rgb(7, 1, 25);
+      width: 200px;
+      height: 200px;
+      box-sizing: border-box;
+      box-shadow: 10px 0 20px rgba(51, 40, 73, 0.2),
+        -10px 0 20px rgba(51, 40, 73, 0.2);
+
+    }
+
+    .contact>:nth-child(2) {
+
+      background-image: url(img/contact.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 787558;
+      width: 80%;
+      height: auto;
+      animation: slid2 1.5s ease-out;
+    }
+
+    @keyframes slid2 {
+      0% {
+        visibility: hidden;
+        transform: translateX(80%);
+      }
+
+      100% {
+        visibility: visible;
+        transform: translateX(0%);
+      }
+
+    }
+
+    .contact-right img {
+      padding: 10px;
+      width: 450px;
+      height: auto;
+      opacity: 10;
+      float: right;
+
+    }
+
+    @media screen and (max-width:860px) {
+      .contact>:nth-child(2) {
+        display: none;
+      }
+
+      .contact>:nth-child(1) {
+        background-image: url(img/contact.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .contact-right img {
+        display: none;
+
+      }
+
+    }
+  </style>
 </head>
 
 <body onload="myFunction()">
@@ -55,6 +261,18 @@
     </div>
   </nav>
   <!-- Add your site or application content here -->
+
+  <div class="bg1">
+    <div id="sq"></div>
+    <div id="cr"></div>
+    <div id="sq"></div>
+  </div>
+  <div class="bg2">
+    <div id="sq"></div>
+    <div id="cr"></div>
+    <div id="sq"></div>
+  </div>
+  <!-- background Design -->
   <div class="main">
     <div class="section">
       <div class="left">
