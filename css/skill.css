@@ -4,7 +4,7 @@ body{
     color:#fff
 }
 .wrapper{
-    margin: 10px;
+    margin: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -24,12 +24,12 @@ h4{
 }
 .container1,
 .container2,
+.container3,
 .container5,
 .container6,
 .container7,
 .container8 {
     border: 1px solid #c7c6c9 !important;
-    border-radius: 7%;
     margin: 15px;
     box-sizing: border-box;
     box-shadow: 5px 0 10px rgba(253, 252, 252, 0.5),
@@ -37,6 +37,7 @@ h4{
     width:300px;
     height: auto;
     border-radius: 10px;
+    cursor:pointer;
 }
 table{
     display: flex;
@@ -50,4 +51,53 @@ td{
     margin: 3px;
     padding: 5px;
     width: auto;
+}
+
+.container1:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
+}
+.container2:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
+}
+.container3:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
+}
+.container4:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
+}
+.container5:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
+}
+.container6:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
+}
+.container7:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
+}
+.container8:hover {
+    transition: 0.25s ease-in;
+    transform: scale(1.03);
+    display: block;
+    transform-style: preserve-3d;
 }
